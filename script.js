@@ -1,69 +1,40 @@
-/* styles.css */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
+// Add any JavaScript logic or interactivity here (if required)
 
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
+// Example: Adding animation and transitions
 
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
+// Navbar scroll animation
+window.addEventListener('scroll', () => {
+  const navbar = document.querySelector('header');
+  if (window.scrollY > 0) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
 
-nav ul li {
-  display: inline-block;
-  margin-right: 20px;
-}
+// Smooth scrolling
+document.querySelectorAll('nav ul li a').forEach((link) => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+    const target = document.querySelector(link.getAttribute('href'));
+    window.scrollTo({
+      top: target.offsetTop - 50,
+      behavior: 'smooth'
+    });
+  });
+});
 
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s;
-}
+// Example: Adding a dynamic class to projects
+const projects = document.querySelectorAll('.project');
 
-nav ul li a:hover {
-  color: #aaa;
-}
+projects.forEach((project, index) => {
+  project.addEventListener('mouseover', () => {
+    project.classList.add('highlight');
+  });
 
-section {
-  padding: 50px 0;
-}
+  project.addEventListener('mouseout', () => {
+    project.classList.remove('highlight');
+  });
+});
 
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.project {
-  margin-bottom: 20px;
-}
-
-form input,
-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-}
-
-form button {
-  background-color: #333;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-}
-
-form button:hover {
-  background-color: #555;
-}
-
-/* Add any additional styles or customizations as needed */
+// Add any additional JavaScript functionality or interactivity as needed
