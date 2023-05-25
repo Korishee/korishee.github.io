@@ -1,41 +1,69 @@
-// Function to toggle the mobile navigation menu
-function toggleMenu() {
-  const menu = document.querySelector('.menu');
-  menu.classList.toggle('active');
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-// Function to handle form submission
-function submitForm(event) {
-  event.preventDefault();
-
-  // Get form inputs
-  const nameInput = document.querySelector('#name');
-  const emailInput = document.querySelector('#email');
-  const messageInput = document.querySelector('#message');
-
-  // Validate form inputs
-  if (nameInput.value.trim() === '' || emailInput.value.trim() === '' || messageInput.value.trim() === '') {
-    alert('Please fill in all fields.');
-    return;
-  }
-
-  // Create an object with form data
-  const formData = {
-    name: nameInput.value.trim(),
-    email: emailInput.value.trim(),
-    message: messageInput.value.trim(),
-  };
-
-  // You can now send the form data to your backend or perform any other desired action
-
-  // Clear form inputs
-  nameInput.value = '';
-  emailInput.value = '';
-  messageInput.value = '';
-
-  alert('Form submitted successfully!');
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
 }
 
-// Add event listeners
-document.querySelector('.toggle-btn').addEventListener('click', toggleMenu);
-document.querySelector('#contact-form').addEventListener('submit', submitForm);
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #aaa;
+}
+
+section {
+  padding: 50px 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.project {
+  margin-bottom: 20px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+form button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #555;
+}
+
+/* Add any additional styles or customizations as needed */
