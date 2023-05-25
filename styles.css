@@ -1,95 +1,69 @@
-/* Reset default styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Body styles */
+/* styles.css */
 body {
   font-family: Arial, sans-serif;
-  line-height: 1.5;
-  background-color: #f2f2f2;
-  color: #333;
-  padding: 20px;
+  margin: 0;
+  padding: 0;
 }
 
-/* Header styles */
 header {
   background-color: #333;
-  padding: 20px;
   color: #fff;
-}
-
-header h1 {
-  font-size: 24px;
-  margin-bottom: 10px;
+  padding: 20px;
+  text-align: center;
 }
 
 nav ul {
-  list-style: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li {
-  display: inline;
-  margin-right: 10px;
+  display: inline-block;
+  margin-right: 20px;
 }
 
 nav ul li a {
   color: #fff;
   text-decoration: none;
+  transition: color 0.3s;
 }
 
-/* Main content styles */
+nav ul li a:hover {
+  color: #aaa;
+}
+
 section {
-  margin-bottom: 20px;
+  padding: 50px 0;
 }
 
-section h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-section p {
-  margin-bottom: 10px;
-}
-
-ul {
-  list-style: disc;
-  margin-left: 20px;
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .project {
   margin-bottom: 20px;
 }
 
-.project h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-/* Contact form styles */
 form input,
 form textarea {
-  display: block;
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid #ccc;
 }
 
 form button {
   background-color: #333;
   color: #fff;
-  border: none;
   padding: 10px 20px;
+  border: none;
   cursor: pointer;
 }
 
-/* Footer styles */
-footer {
-  text-align: center;
-  padding: 10px;
-  background-color: #333;
-  color: #fff;
+form button:hover {
+  background-color: #555;
 }
+
+/* Add any additional styles or customizations as needed */
