@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="theme-color" content="#000000">
+    <meta name="referrer" content="no-referrer">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <style>body{margin: 0; padding:0; color: #000000;}</style>
+    <title>TSPORTSFHD || Live TV || Mr 999 Plus</title>
+    <meta property="og:image" content="https://mr999plus.com/documents/img/mr999plus.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <link rel="icon" type="image/png" href="https://mr999plus.com/documents/img/mr999plus.jpg">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/clappr/latest/clappr.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/@clappr/hlsjs-playback@1.0.1/dist/hlsjs-playback.min.js"></script>
+    <meta name="description" content="Live TV || Mr 999 Plus || Watch Your Favourite TV Channels Anytime Anywhere">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/clappr.level-selector/latest/level-selector.min.js"></script>
+</head>
+<body>
+    <div id="player" style="height: 100%; width: 100%;"></div>
+    <script>
+        var player = new Clappr.Player({
+            source: 'https://tvs1.aynatod.com/tsportsfhd/index.m3u8?hdnts=1706024770+exp=1706067990+acl=/~data=2a02:4780:badd:15:fced:1ff:fe15:130-Live+hamac=916f5b74e027369194e784b2a3f51963cd20d03ebc472a97a6e64f9c99e01b93',
+            width: '100%',
+            height: '100%',
+            autoPlay: true,
+            plugins: [Clappr.HlsjsPlayback, Clappr.LevelSelector],
+            mimeType: 'application/x-mpegURL',
+            mediaController: { seekbar: 'https://fff0000', buttons: '#eee' }
+        });
+        document.getElementById('player').appendChild(player.el);
+    </script>
+</body>
+</html>
