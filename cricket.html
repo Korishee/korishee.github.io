@@ -4,12 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Embedding Live Video Stream</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        iframe {
+            display: block;
+            width: 100%;
+            height: 100vh;
+            border: none;
+        }
+    </style>
 </head>
 <body>
-    <iframe src="https://idn.gdplayertv.to/live-tv/astro-cricket/?embed=1" 
-            frameborder="0" 
-            scrolling="no" 
-            style="width: 100%; height: 100vh;">
-    </iframe>
+    <iframe src="https://idn.gdplayertv.to/live-tv/astro-cricket/?embed=1"></iframe>
 </body>
 </html>
