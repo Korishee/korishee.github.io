@@ -1,4 +1,8 @@
-pip install groq requests
+import os
+
+# Run the pip install command
+os.system("pip install groq requests")
+
 import os
 from groq import Groq
 
