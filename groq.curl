@@ -1,0 +1,1 @@
+curl -X POST "https://api.groq.com/openai/v1/chat/completions" -H "Authorization: Bearer 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" -H "Content-Type: application/json" -d '{\"messages\": [{\"role\": \"user\", \"content\": \"Explain the importance of fast language models\"}], \"model\": \"llama3-8b-8192\"}' -o response.txt
