@@ -1,4 +1,3 @@
-!pip install groq
 import os
 from groq import Groq
 
